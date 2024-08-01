@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entendendo DOM</title>
+    <style>
+        div#area {
+            width: 200px;
+            height: 200px;
+            background-color: rgb(7, 71, 31);
+            color: #fff;
+            text-align: center;
+            line-height: 200px;
+            margin: auto;
+        }
+        *{
+            background-color: rgb(153, 153, 153);
+            text-align: center;
+        }
+
+        h1{
+            padding-top: 50px;
+            color: #aefff2;
+        }
+    </style>
+</head>
+<body>
+    <div id="area">
+        Interaja comigo!
+    </div>
+
+    <h1>Somando dois números</h1>
+    <input type="number" name="txn1" id="txn1">
+    <input type="number" name="txn2" id="txn2">
+    <input type="button" value="Somar" onclick="somar()">
+    <div id="res">Resultado</div>
+
+    <script>
+        var a = window.document.getElementById('area');
+        a.addEventListener('click', clicar);
+        a.addEventListener('mouseenter', entrar);
+        a.addEventListener('mouseout', sair);
+        a.addEventListener('dblclick', duploClique);
+        a.addEventListener('wheel', rolar);
+        
+        function clicar() {
+            a.innerText = 'Clicou!';
+            a.style.background = 'indigo';
+        }
+
+        function entrar(){
+            a.innerText = 'Entrou!';
+        }
+
+        function sair(){
+            a.innerText = 'Saiu!'
+            a.style.background = 'rgb(7, 71, 31)'
+        }
+
+        function duploClique(){
+            a.innerText = 'Clicou duas vezes!'
+            a.style.background = 'rgb(161, 160, 97)'
+        }
+
+        function rolar(){
+            a.innerHTML = 'rolar!'
+            a.style.background = 'rgb(76, 5, 36)'
+        }
+
+        function teclaPressionada(){
+            a.innerHeight = 'Tecla pressionada'
+            a.style.background = 'rgb(76, 39, 90 )'
+        }
+
+        function somar(){
+            var tn1 = window.document.getElementById('txn1');
+            var tn2 = window.document.getElementById('txn2');
+            var res = window.document.getElementById('res');
+
+            var n1 = Number(tn1.value);
+            var n2 = Number(tn2.value);
+
+            var s = n1 + n2;
+            res.innerHTML = `A soma entre ${n1} e ${n2} é igual a ${s}`;
+
+
+        }
+
+    </script>
+</body>
+</html>
