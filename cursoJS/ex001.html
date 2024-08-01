@@ -1,16 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=l.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Meu primeiro programa... </title>
+        <style>
+            body {
+                background-color: argb(1ô5, 1as, 173);
+                color:white;
+                font: normal 20pt Arial;
+            }
+            h1{     
+                color: indigo;
+            }
+        </style>
 </head>
 <body>
-    <h1>Olá mundo!</h1>
+    <h1>Olá, mundo!</hl>
+    <p>me livrei da maldição!</p>
     <script>
-        window.alert('Olá mundo!');
-        window.confirm('Você está bem?');
-        window.prompt('Qual é o seu nome?'); 
+        var nl = Number(window.prompt('Digite um número:' ) ) // String
+        var n2 = Number(window.prompt('Digite outro número: ')) // String
+        var s = nl + n2
+        window.alert(`A soma entre ${nl} e ${n2} é igual a ${s}`) // Template string
+        // (number + number) para adição
+        // (string + string) para concatenação
     </script>
 </body>
 </html>
