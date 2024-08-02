@@ -31,8 +31,8 @@
     </div>
 
     <h1>Somando dois números</h1>
-    <input type="number" name="txn1" id="txn1">
-    <input type="number" name="txn2" id="txn2">
+    <input type="number" name="txn1" id="txn1"> + 
+    <input type="number" name="txn2" id="txn2"> =  
     <input type="button" value="Somar" onclick="somar()">
     <div id="res">Resultado</div>
 
@@ -67,12 +67,7 @@
             a.innerHTML = 'rolar!'
             a.style.background = 'rgb(76, 5, 36)'
         }
-
-        function teclaPressionada(){
-            a.innerHeight = 'Tecla pressionada'
-            a.style.background = 'rgb(76, 39, 90 )'
-        }
-
+ 
         function somar(){
             var tn1 = window.document.getElementById('txn1');
             var tn2 = window.document.getElementById('txn2');
